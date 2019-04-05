@@ -1,0 +1,25 @@
+{
+  "name": "a-frame-webvr",
+  "version": "1.0.0",
+  "description": "A project to learn A-Frame and WebVR",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tdnvl/A-frame-webVR.git"
+  },
+  "author": "tdnvl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tdnvl/A-frame-webVR/issues"
+  },
+  "homepage": "https://github.com/tdnvl/A-frame-webVR#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.3"
+  }
+}
