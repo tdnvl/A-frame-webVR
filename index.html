@@ -33,11 +33,17 @@
             <h2><a href="primitives-and-attributes.html">Primitives and attributes</a></h2>
             <p>The <code>side</code> attribute helps make a shape visible from <em>both</em> sides</p>
             <p><code>open-ended</code> opens the volume, making it look hollow</p>
+            <h2><a href="position-relative-positioning.html">Position and relative positioning</a></h2>
+            <p>Distances are in meter!</p>
             <p>The 3D space is a right-hand XYZ with positive Z pointing towards the user</p>
             <figure class="figure">
-                    <img src="img/xyz-right-hand.png" class="figure-img img-fluid rounded" alt="3D space in A-Frame">
-                    <figcaption class="figure-caption">3D space in A-Frame.</figcaption>
-                  </figure>
+                <img src="img/xyz-right-hand.png" class="figure-img img-fluid rounded" alt="3D space in A-Frame">
+                <figcaption class="figure-caption">3D space in A-Frame.</figcaption>
+            </figure>
+            <p>If surfaces overlap, the rendering will bug. Make sure that there is 1 cm of difference in X, Y, or Z to
+                avoid this effect.</p>
+            <p>Children entities inherit position from parent entities. This is a very convenient way of "grouping"
+                entities that one wants to move together.</p>
         </div>
     </main>
     <footer class="container">
