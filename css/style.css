@@ -1,0 +1,12 @@
+.jumbotron{
+    background-image: url('../img/neonbrand-386945-unsplash.jpg');
+    min-height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: top;
+    color: #fff;
+}
+
+footer {
+    background-color: #999;
+}
