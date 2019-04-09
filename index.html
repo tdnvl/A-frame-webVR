@@ -45,10 +45,24 @@
                 avoid this effect.</p>
             <p>Children entities inherit position from parent entities. This is a very convenient way of "grouping"
                 entities that one wants to move together.</p>
+            <h2><a href="rotation-and-relative-rotation.html">Rotation and relative rotation</a></h2>
+            <p>Each entity has the rotation component, just like the rotation component, and it is represented by an
+                html attribute: <code>rotation</code>.</p>
+            <p>Just like position, the children inherit rotation, too. The direction of rotation is found using the
+                right hand rule again: Wrap your right hand around the axis in question, with the thumb poiting towards
+                increasing values. The way your fingers wrap around the axis indicate the positive rotatin direction.
+            </p>
+            <h2><a href="scale-relative-scale-reflection.html">Scale, relative scale, and reflection</a></h2>
+            <p>Scale is tricky: Be careful if you apply a rotation to the entity! The axes will rotate, too, and you'll
+                have to really use the right hand rule to visualize where the scaling should be applied.</p>
+            <p>Negative scaling is called <em>reflection</em>, and it's basically like pulling a sock inside out. Using
+                <code>side="double"</code> will help keep the entity looking "solid."</p>
         </div>
     </main>
     <footer class="container-fluid">
-        <p>&copy; @tdnvl 2019 | Photo by <a href="https://unsplash.com/photos/mlZzMow-CQw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">NeONBRAND</a> on Unsplash</p>
+        <p>&copy; @tdnvl 2019 | Photo by <a
+                href="https://unsplash.com/photos/mlZzMow-CQw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                target="_blank">NeONBRAND</a> on Unsplash</p>
     </footer>
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
