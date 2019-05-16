@@ -71,16 +71,29 @@
                 surface detail such as bumps, grooves, and scratches to a model which catch the light as if they are
                 represented by real geometry.</blockquote>
             <h3>Asset Management System</h3>
-            <p>By using <code>
-                    <a-assets></a-assets>
-                </code> we can preload assets in A-Frame and call them in the scene when we need them. In the entity,
+            <p>By using <code>a-assets</code> we can preload assets in A-Frame and call them in the scene when we need
+                them. In the entity,
                 use: <code>normal-map="#texture-id"</code>. Other normal maps attributes include:
                 <code>normal-texture-repeat</code> which defaults a 1 1 and acts like the texture repeat.</p>
             <p>The normal map can be scaled (default 1 1). Inverting the scale on an axis (-1) can fix the lighting
                 direction issues and make a texture look much better.</p>
             <p><code>roughness="0.5"</code> by default; makes the texture look shinier (<0.5) or duller (>0.5).</p>
-            <p>The material component can be used to do the same thing as for the first box. It feels a bit like CSS.</p>
-
+            <p>The material component can be used to do the same thing as for the first box. It feels a bit like CSS.
+            </p>
+            <h2><a href="image-and-curved-image-primitives.html">Image and curved image primitives</a></h2>
+            <p>With <code>a-image</code> we can use a conversion of 1 pixel per mm.</p>
+            <p>There's a trick to scale images without any loss:</p>
+            <ul>
+                <li>Make the width one meter (1)</li>
+                <li>Calculate the height by calculating the distance in m per pixel (width in m / width in px)</li>
+                <li>Multiply by this ratio by the height in px to get the height in m</li>
+            </ul>
+            <p>So (1 m/1024 px)*768 px = 0.75 m. To make the image larger without distorsion, we can simply increase the
+                scale: <code>3 3 1</code></p>
+            <h3>Curved image primitive</h3>
+            <p>The <code>theta-length</code> attribute is the "length" of the curve, expressed as an angle (default 270).
+                The <code>theta-start</code> attribute is the angle at which the curve starts (couter clockwise angle)</p>
+                <p>To calculate the width of a curved image, we need to rely on <a href="http://handymath.com/cgi-bin/arc18.cgi?submit=Entry" target="_blank">an arc calculator.</a></p>
         </div>
     </main>
     <footer class="container-fluid">

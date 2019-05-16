@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>L09 - Image and curved image primitives</title>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <!-- Asset Management System -->
+        <a-assets>
+            <img id="L09-img-01" src="img/L09-IMGs/L09-img-1024x768-flat.jpg">
+            <img id="L09-img-02" src="img/L09-IMGs/L09-img-1024x768-curved.jpg">
+            <img id="L09-img-03" src="img/L09-IMGs/L09-img-1024x768-curved-layout-R.jpg">
+            <img id="L09-img-04" src="img/L09-IMGs/L09-img-1024x768-curved-layout-C.jpg">
+            <img id="L09-img-05" src="img/L09-IMGs/L09-img-1024x768-curved-layout-L.jpg">
+        </a-assets>
+
+        <!-- Image Primitive | IMG size 1024x768-->
+        <!-- IMG width (px) = 1 m -->
+        <a-image    src="#L09-img-01"
+                    position="0 1.5 -3"
+                    width="1"
+                    height="0.75"
+                    scale="3 3 1">
+        </a-image>
+
+        <!-- Curved image Primitive | Single IMG | IMG size 1024x768-->
+        <a-curvedimage  src="#L09-img-02"
+                        theta-length="90"
+                        theta-start="135"
+                        radius="2"
+                        position="0 1.5 0">
+        </a-curvedimage>
+    </a-scene>
+</body>
+
+</html>
