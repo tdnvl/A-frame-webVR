@@ -91,10 +91,21 @@
             <p>So (1 m/1024 px)*768 px = 0.75 m. To make the image larger without distorsion, we can simply increase the
                 scale: <code>3 3 1</code></p>
             <h3>Curved image primitive</h3>
-            <p>The <code>theta-length</code> attribute is the "length" of the curve, expressed as an angle (default 270).
-                The <code>theta-start</code> attribute is the angle at which the curve starts (couter clockwise angle)</p>
-                <p>To calculate the width of a curved image, we need to rely on <a href="http://handymath.com/cgi-bin/arc18.cgi?submit=Entry" target="_blank">an arc calculator.</a></p>
-                <p>Curved images are appealing because <em>they are easier on the eyes</em> than rectangles. There is less distorsion.</p>
+            <p>The <code>theta-length</code> attribute is the "length" of the curve, expressed as an angle (default
+                270).
+                The <code>theta-start</code> attribute is the angle at which the curve starts (couter clockwise angle)
+            </p>
+            <p>To calculate the width of a curved image, we need to rely on <a
+                    href="http://handymath.com/cgi-bin/arc18.cgi?submit=Entry" target="_blank">an arc calculator.</a>
+            </p>
+            <p>Curved images are appealing because <em>they are easier on the eyes</em> than rectangles. There is less
+                distorsion.</p>
+            <h2>Breaking primitives down</h2>
+            <p><code>
+                    <a-entity></a-entity>
+                </code> has no appearance, behavior, or functionality. It's like and empty div.</p>
+            <p>Primitives are entities with a semantic name that have a preset bundle of components with default values
+                and map HTML attributes to component data.</p>
         </div>
     </main>
     <footer class="container-fluid py-5">
