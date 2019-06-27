@@ -20,6 +20,7 @@
     "gulp": "^4.0.0"
   },
   "dependencies": {
-    "browser-sync": "^2.26.3"
+    "browser-sync": "^2.26.3",
+    "axios": ">=0.18.1"
   }
 }
