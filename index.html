@@ -57,9 +57,47 @@
                 have to really use the right hand rule to visualize where the scaling should be applied.</p>
             <p>Negative scaling is called <em>reflection</em>, and it's basically like pulling a sock inside out. Using
                 <code>side="double"</code> will help keep the entity looking "solid."</p>
+            <h2><a href="image-textures-and-materials.html">Image textures and materials</a></h2>
+            <p>Adding a texture to an entity is as simple as pointing to an image in an <code>src</code> attribute. The
+                textures in this course were sourced for free from textures.com.</p>
+            <p>Note that if the entity already has a color, the color will be seen through the texture. We can either
+                remove the color attribute or change it to white.</p>
+            <p>A <code>repeat</code> attribute acts a bit like the background repeate in CSS. We can decide how many
+                time a texture is repeated on the x and y axes. The default is <code>repeat="1 1"</code></p>
+            <h3>Normal maps</h3>
+            <p>From the Unity documentation:</p>
+            <blockquote class="blockquote">Normal maps are a type of Bump Map. They are a special kind of texture that
+                allow you to add
+                surface detail such as bumps, grooves, and scratches to a model which catch the light as if they are
+                represented by real geometry.</blockquote>
+            <h3>Asset Management System</h3>
+            <p>By using <code>a-assets</code> we can preload assets in A-Frame and call them in the scene when we need
+                them. In the entity,
+                use: <code>normal-map="#texture-id"</code>. Other normal maps attributes include:
+                <code>normal-texture-repeat</code> which defaults a 1 1 and acts like the texture repeat.</p>
+            <p>The normal map can be scaled (default 1 1). Inverting the scale on an axis (-1) can fix the lighting
+                direction issues and make a texture look much better.</p>
+            <p><code>roughness="0.5"</code> by default; makes the texture look shinier (<0.5) or duller (>0.5).</p>
+            <p>The material component can be used to do the same thing as for the first box. It feels a bit like CSS.
+            </p>
+            <h2><a href="image-and-curved-image-primitives.html">Image and curved image primitives</a></h2>
+            <p>With <code>a-image</code> we can use a conversion of 1 pixel per mm.</p>
+            <p>There's a trick to scale images without any loss:</p>
+            <ul>
+                <li>Make the width one meter (1)</li>
+                <li>Calculate the height by calculating the distance in m per pixel (width in m / width in px)</li>
+                <li>Multiply by this ratio by the height in px to get the height in m</li>
+            </ul>
+            <p>So (1 m/1024 px)*768 px = 0.75 m. To make the image larger without distorsion, we can simply increase the
+                scale: <code>3 3 1</code></p>
+            <h3>Curved image primitive</h3>
+            <p>The <code>theta-length</code> attribute is the "length" of the curve, expressed as an angle (default 270).
+                The <code>theta-start</code> attribute is the angle at which the curve starts (couter clockwise angle)</p>
+                <p>To calculate the width of a curved image, we need to rely on <a href="http://handymath.com/cgi-bin/arc18.cgi?submit=Entry" target="_blank">an arc calculator.</a></p>
+                <p>Curved images are appealing because <em>they are easier on the eyes</em> than rectangles. There is less distorsion.</p>
         </div>
     </main>
-    <footer class="container-fluid">
+    <footer class="container-fluid py-5">
         <p>&copy; @tdnvl 2019 | Photo by <a
                 href="https://unsplash.com/photos/mlZzMow-CQw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
                 target="_blank">NeONBRAND</a> on Unsplash</p>
