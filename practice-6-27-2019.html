@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene background="color: #ECECEC">
+        <a-assets>
+            <a-asset-item id="tree" src="models/tree2.glb"></a-asset-item>
+        </a-assets>
+        <a-gltf-model src="#tree" rotation="0 45 0"></a-gltf-model>
+        <a-box></a-box>
+        <a-entity position="0 0 4">
+            <a-camera></a-camera>
+        </a-entity>
+    </a-scene>
+</body>
+
+</html>
