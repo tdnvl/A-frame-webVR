@@ -17,10 +17,10 @@
   },
   "homepage": "https://github.com/tdnvl/A-frame-webVR#readme",
   "devDependencies": {
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.2"
   },
   "dependencies": {
-    "browser-sync": "^2.26.3",
-    "axios": ">=0.18.1"
+    "axios": ">=0.18.1",
+    "browser-sync": "^2.26.7"
   }
 }
