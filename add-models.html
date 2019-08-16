@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <title>L12 - Sky and 360° image</title>
+        <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    </head>
+    
+    <body>
+        <a-scene>
+            <!-- Asset Management System -->
+            <a-assets>
+                <img id="floor" src="img/floor-1024.jpg">
+                <img id="clear-sunny-sky" src="img/clear-sunny-sky.jpg">
+                <a-asset-item id="campfire-obj" src="models/model.obj"></a-asset-item>
+                <a-asset-item id="campfire-mtl" src="models/materials.mtl"></a-asset-item>
+                <a-asset-item id="nature" src="models/scene.gltf"></a-asset-item>
+            </a-assets>
+
+            <!-- Sky 
+            <a-sky src="#clear-sunny-sky">
+            </a-sky> -->
+
+            <!-- GLTf model -->
+            <a-entity gltf-model="#nature" position="0 -25 3"></a-entity>
+
+            <!-- Camera -->
+            <a-entity position="5 -0.7 -2.2" rotation="0 -90 0">
+                <a-camera active="true"></a-camera>
+            </a-entity>
+
+            <!-- OBJ model
+            <a-obj-model src="#campfire-obj" mtl="#campfire-mtl" position="0 .5 0"></a-obj-model> -->
+            
+            <!-- Ground 
+            <a-plane material="color: #FFFFFF;
+                               src: #floor;
+                               repeat: 5 5;
+                               normal-map: #floor-NRM;
+                               normal-texture-repeat: 5 5"
+                     rotation="-90 0 0"
+                     scale="10 10 1">
+            </a-plane> -->
+
+            <!-- Camera -->
+            <a-entity position="0 -1 1">
+                <a-camera></a-camera>
+            </a-entity>
+        </a-scene>
+    </body>
+</html>
