@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Animation</title>
+        <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    </head>
+    
+    <body>
+        <a-scene>
+            <!-- Asset Management System -->
+            <a-assets>
+                <img id="floor" src="img/floor-1024.jpg">
+            </a-assets>
+
+            <a-box color="#AA0000"
+                    position="0 0.5 0">
+            </a-box>
+
+            <!-- OBJ model
+            <a-obj-model src="#campfire-obj" mtl="#campfire-mtl" position="0 .5 0"></a-obj-model> -->
+            
+            <!-- Ground 
+            <a-plane material="color: #FFFFFF;
+                               src: #floor;
+                               repeat: 5 5;
+                               normal-map: #floor-NRM;
+                               normal-texture-repeat: 5 5"
+                     rotation="-90 0 0"
+                     scale="10 10 1">
+            </a-plane> -->
+
+        </a-scene>
+    </body>
+</html>
