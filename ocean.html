@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Ocean</title>
+        <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+        <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.js"></script>
+    </head>
+    
+    <body>
+        <a-scene>
+            <a-ocean width="100" depth="100" density="50" color="#1da2d8"></a-ocean>
+            
+            <a-entity animation="property: rotation;to: 0 -360 0; loop: true; easing: linear; dur: 8000">
+                <a-entity position="0 0 -10" rotation="-25 90 0" animation="property: rotation; to: 0 90 0; loop: true; dir: alternate; easing: linear">
+                <!-- a-obj-model src="#shark-obj" mtl="#shark-mtl"></a-obj-model -->
+                <a-entity gltf-model="#shark"></a-entity>
+                </a-entity>
+            </a-entity>
+            <a-assets>
+                <img id="stars" src="img/uhd_9428_panorama_eq.jpg">
+                <a-item id="shark-obj" src="models/shark.obj"></a-item>
+                <a-item id="shark-mtl" src="models/shark.mtl"></a-item>
+                <a-item id="shark" src="models/shark.gltf"></a-item>
+            </a-assets>
+            
+            <a-sky src="#stars"></a-sky>
+        </a-scene>
+    </body>
+</html>

@@ -31,7 +31,7 @@
             <a-entity>
                 <a-box position="0 1.6 0"
                     animation="property: rotation; to: 0 0 360; loop: 1;"
-                    color="#AAAAEE"></a-box>
+                    color="#00AA00"></a-box>
             </a-entity>
 
             <a-entity>
@@ -44,7 +44,8 @@
                     <a-box position="0 3 0"
                             height=".1"
                             depth=".1"
-                            width="1.2">
+                            width="1.2"
+                            color="#0000AA">
                     </a-box>
                 </a-entity>            
             <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
@@ -54,6 +55,12 @@
                 material="color: red"
                 animation__mouseenter="property: components.material.material.color; type: color; to: blue; startEvents: mouseenter; dur: 100";
                 animation__mouseleave="property: components.material.material.color; type: color; to: red; startEvents: mouseleave; dur: 100";>
+            </a-entity>
+            
+            
+            <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear">
+                <a-box position="2 2 0" color="#FFAA00">
+                </a-box>
             </a-entity>
 
         </a-scene>
