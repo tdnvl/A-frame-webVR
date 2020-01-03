@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Oculus Go - Night sky experiments</title>
+    <meta name="description" content="A simple A-Frame page to experiment with controllers">
+    <script src="https://aframe.io/releases/1.0.1/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Match Oculus Go controller if present, regardless of hand. -->
+      <a-entity oculus-go-controls></a-entity>
+
+      <!-- Match Oculus Go controller if present and for specified hand. -->
+      <a-entity oculus-go-controls="hand: left"></a-entity>
+      <a-entity oculus-go-controls="hand: right"></a-entity>
+      
+      <a-entity raycaster="showLine: true; far: 100" line="color: red; opacity: 0.75"></a-entity>
+
+      <a-assets>
+        <img src="./img/sky-3.jpg" id="skymap" />
+      </a-assets>
+    
+      <a-entity
+        id="sky"
+        geometry="primitive:sphere; radius:30; phiLength:360; phiStart:0; thetaLength:90"
+        material="shader:flat; side:back; height:2048; src:#skymap; width:2048; opacity: 1;"
+      ></a-entity>
+      <a-entity
+        id="ground"
+        geometry="primitive: box; width: 800; height: 0.01; depth: 800"
+        material="shader: flat; color: #020315;"
+      ></a-entity>
+    </a-scene>
+  </body>
+</html>
