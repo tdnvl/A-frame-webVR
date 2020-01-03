@@ -16,7 +16,8 @@
       <a-entity raycaster="showLine: true; far: 100" line="color: red; opacity: 0.75"></a-entity>
 
       <a-assets>
-        <img src="./img/sky-3.jpg" id="skymap" />
+        <img src="./img/sky-3.jpg" id="skymap" preload="auto" />
+        <a-asset-item id="campfire" src="./models/campfire.gltf" preload="auto"></a-asset-item>
       </a-assets>
     
       <a-entity
@@ -29,6 +30,7 @@
         geometry="primitive: box; width: 800; height: 0.01; depth: 800"
         material="shader: flat; color: #020315;"
       ></a-entity>
+      <a-gltf-model src="#campfire" position="0 -1.2 -2" scale="1.2 1.2 1.2" shadow></a-gltf-model>
     </a-scene>
   </body>
 </html>
