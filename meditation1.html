@@ -22,7 +22,7 @@
         <audio id="crickets" src="./audio/crickets.wav" preload="auto"></audio>
       </a-assets>
 
-      <a-sound src="#crickets"></a-sound>
+      <a-sound src="src: #crickets" autoplay="true" loop="true"></a-sound>
     
       <a-entity
         id="sky"
@@ -34,7 +34,7 @@
         geometry="primitive: box; width: 800; height: 0.01; depth: 800"
         material="shader: flat; color: #020315;"
       ></a-entity>
-      <a-gltf-model src="#campfire" position="0 -1.2 -2" scale="1.2 1.2 1.2" shadow sound="src: #campfire_audio"></a-gltf-model>
+      <a-gltf-model src="#campfire" position="0 -1.2 -2" scale="1.2 1.2 1.2" shadow sound="src: #campfire_audio; autoplay: true; loop: true"></a-gltf-model>
     </a-scene>
   </body>
 </html>
